@@ -2,10 +2,10 @@
 MobX - Modificando o Start do Flutter para Gerencia de Estado com MobX
 
 - [x] Novo Projeto Flutter
-- [ ] Importação da MobX
-- [ ] Criação do Gerenciador de Estado
-- [ ] Alterando main.dart
-- [ ] Testando
+- [x] Importação da MobX
+- [x] Criação do Gerenciador de Estado
+- [x] Alterando main.dart
+- [x] Testando
 
 ### Dependencias:
 Buscar as dependencias de https://pub.dev/
@@ -14,4 +14,28 @@ Buscar as dependencias de https://pub.dev/
 
 ### Arquivo de Gerencia
 - counter.dart
+
+### Modificar Main.dart
+- remover setState()
+- Adicionar Counter
+```
+  Counter counter = Counter();
+```
+- Ajustar Clique do botão 
+```
+  onPressed: counter.increment,
+```
+- Ajustar Text para dentro do Observer
+```
+  Observer(
+      builder: (_)
+      {
+        return Text(
+          '${counter.count}',
+          style: Theme.of(context).textTheme.display1,
+        );
+      }
+    ),
+```
+
 
